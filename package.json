@@ -1,0 +1,23 @@
+{
+  "name": "webpack-dev-server-router-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "run-p dev:*",
+    "dev:backend": "serve ./backend --port 5000",
+    "dev:frontend": "DEBUG=webpack* webpack-dev-server --config ./webpack.config.babel.js --env.public /static/theme/ --env.port 3000"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "debug": "^3.1.0",
+    "file-loader": "^1.1.5",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.1",
+    "serve": "^6.3.1"
+  }
+}
